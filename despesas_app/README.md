@@ -1,9 +1,8 @@
 # Minha API
 
-Este pequeno projeto faz parte do material diático da Disciplina **Desenvolvimento Full Stack Básico** 
+Este pequeno projeto faz parte da Disciplina **Desenvolvimento Full Stack Básico**.
 
-O objetivo aqui é ilutsrar o conteúdo apresentado ao longo das três aulas da disciplina.
-
+O objetivo aqui é desenvolver minha primeira aplicação do curso.
 ---
 ## Como executar 
 
