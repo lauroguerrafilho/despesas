@@ -1,6 +1,6 @@
 # Meu Front
 
-Este pequeno projeto faz parte do da Disciplina **Desenvolvimento Full Stack Básico** 
+Este pequeno projeto faz parte da Disciplina **Desenvolvimento Full Stack Básico** 
 
 O objetivo aqui é desenvolver minha primeira aplicação do curso.
 
