@@ -1,8 +1,8 @@
 # Meu Front
 
-Este pequeno projeto faz parte do material diático da Disciplina **Desenvolvimento Full Stack Básico** 
+Este pequeno projeto faz parte do da Disciplina **Desenvolvimento Full Stack Básico** 
 
-O objetivo aqui é ilutsrar o conteúdo apresentado na terceira aula.
+O objetivo aqui é desenvolver minha primeira aplicação do curso.
 
 ---
 ## Como executar
