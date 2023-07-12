@@ -28,7 +28,7 @@ def home():
 @app.post('/cadastrar_despesa', tags=[despesa_tag],
           responses={"200": DespesasViewSchema, "409": ErrorSchema, "400": ErrorSchema})
 def add_despesa(form: DespesasSchema):
-    """Adiciona uma nova Despesa à base de dados
+    """Adiciona uma nova despesa à base de dados
 
     Retorna uma representação das despesas
     """
@@ -66,7 +66,7 @@ def add_despesa(form: DespesasSchema):
 @app.get('/buscar_despesa', tags=[despesa_tag],
          responses={"200": ListagemDespesasSchema, "404": ErrorSchema})
 def get_despesas():
-    """Faz a busca por todas as Despesas cadastradas
+    """Faz a busca por todas as despesas cadastradas
 
     Retorna uma representação da listagem de despesas.
     """
@@ -84,36 +84,10 @@ def get_despesas():
         print(despesas)
         return apresenta_despesas(despesas), 200
 
-
-@app.get('/despesas', tags=[despesa_tag],
-         responses={"200": DespesasViewSchema, "404": ErrorSchema})
-def get_despesa(query: DespesasBuscaSchema):
-    """Faz a busca por um Produto a partir do id do produto
-
-    Retorna uma representação das despesas associadas.
-    """
-    despesa_id = query.id
-    logger.debug(f"Coletando dados sobre despesa #{despesa_id}")
-    # criando conexão com a base
-    session = Session()
-    # fazendo a busca
-    despesa = session.query(Despesas).filter(Despesa.id == despesa_id).first()
-
-    if not despesa:
-        # se a despesa não foi encontrada
-        error_msg = "Despesa não encontrada na base :/"
-        logger.warning(f"Erro ao buscar despesa '{despesa_id}', {error_msg}")
-        return {"mesage": error_msg}, 404
-    else:
-        logger.debug(f"Despesa econtrada: '{despesa.nome}'")
-        # retorna a representação de produto
-        return apresenta_despesa(despesa), 200
-
-
 @app.delete('/deletar_despesa', tags=[despesa_tag],
             responses={"200": DespesasSchema, "404": ErrorSchema})
 def del_despesa(query: DespesasBuscaSchema):
-    """Deleta uma Despesa a partir do nome da despesa informada
+    """Exclui uma despesa a partir do nome da despesa informada
 
     Retorna uma mensagem de confirmação da remoção.
     """

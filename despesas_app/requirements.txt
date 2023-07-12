@@ -6,7 +6,6 @@ Flask-Cors
 flask-openapi3
 flask-restx
 Flask-SQLAlchemy
-greenlet
 gunicorn
 importlib-metadata
 itsdangerous
